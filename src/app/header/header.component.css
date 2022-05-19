@@ -1,0 +1,13 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__links a {
+    margin: 0 2rem;
+}
+
+.link--home {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    min-height: 25vh;
+}
+
+.link--home {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

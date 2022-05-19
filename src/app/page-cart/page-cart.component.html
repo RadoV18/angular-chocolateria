@@ -1,0 +1,85 @@
+<div class="cart__container">
+    <h1 class="cart__title">Detalle de la Compra</h1>
+    <table class="cart__table">
+        <thead class="table__header">
+            <th></th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th></th>
+        </thead>
+        <ng-container *ngFor="let product of cart$ | async">
+            <tr *ngIf="product.quantity > 0">
+                <td class="cart__image cell--center"><img src={{product.imagePath}}></td>
+                <td class="cell--center">{{product.title}}</td>
+                <td class="cell--center">${{product.price}}</td>
+                <td class="cell--center">{{product.quantity}}</td>
+                <td class="cell--right">${{product.quantity * product.price | number: '.2'}}</td>
+                <td>
+                    <button mat-mini-fab (click)="delete(product.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </ng-container>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell--center cell--bold">Subtotal:</td>
+            <td class="cell--right">${{this.subTotal | number: '.2'}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell--center cell--bold">Descuento:</td>
+            <td class="cell--right">${{this.discount | number: '.2'}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="cell--center cell--bold">Total:</td>
+            <td class="cell--right">${{this.total | number: '.2'}}</td>
+            <td></td>
+        </tr>
+    </table>
+    <h1 class="cart__title">Datos del Cliente</h1>
+    <div class="form__container">
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>Nombres:</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>Apellidos:</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="form__container">
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>CI:</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>Celular:</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="form__container">
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>Correo Electrónico:</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="form__input" appearance="fill">
+            <mat-label>Dirección:</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="form__submit">
+        <button mat-raised-button color="accent" (click)="openSnackBar()">Realizar Pedido</button>
+    </div>
+</div>

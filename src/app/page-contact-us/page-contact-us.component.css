@@ -1,0 +1,58 @@
+.cards__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+}
+
+.cards__container .mat-card {
+    width: 25%;
+}
+
+.page__title {
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.info__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 1rem 0;
+}
+
+.input__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input--full {
+    width: 100%;
+}
+
+.form__input {
+    width: 45%;
+}
+
+.button__container {
+    display: flex;
+    justify-content: center;
+}
+
+.button__container button {
+    width: 25%;
+}
+
+.buttons__container {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}

@@ -1,0 +1,56 @@
+.cart__title {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.cart__image img {
+    max-height: 100px;
+}
+
+.cart__container {
+    width: 80%;
+    min-height: 75vh;
+    margin: 0 auto;
+}
+
+.cart__table {
+    width: 100%;
+}
+
+.cell--center {
+    text-align: center;
+}
+
+.cell--right {
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.table__header {
+    font-size: 20px;
+}
+
+.cell--bold {
+    font-weight: bold;
+}
+
+.form__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mat-form-field {
+    width: 35%;
+}
+
+.form__submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.form__submit button {
+    margin: 1rem auto;
+    width: 25%;
+}
